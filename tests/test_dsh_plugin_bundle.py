@@ -15,7 +15,7 @@ BRIDGE_TEST = ROOT / "tests/test_dsh_llm_bridge.mjs"
 
 def test_dsh_bundle_manifest_points_to_adapter_patch() -> None:
     manifest = json.loads(PACKAGE.read_text(encoding="utf-8"))
-    assert manifest["name"] == "dsh-arc"
+    assert manifest["name"] == "@troywjz/arc-dsh"
     assert manifest["main"] == "./plugins/arc/dsh/index.js"
     assert manifest["dsh"]["bundle"]["patch"] == (
         "./plugins/arc/dsh/cordis.patch.yml"
@@ -28,7 +28,7 @@ def test_dsh_bundle_manifest_points_to_adapter_patch() -> None:
 def test_dsh_patch_loads_package_entry() -> None:
     patch = PATCH.read_text(encoding="utf-8")
     assert "id: arc" in patch
-    assert "name: dsh-arc" in patch
+    assert "name: '@troywjz/arc-dsh'" in patch
 
 
 def test_dsh_adapter_registers_existing_arc_skill() -> None:

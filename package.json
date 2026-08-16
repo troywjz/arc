@@ -1,6 +1,6 @@
 {
-  "name": "dsh-arc",
-  "version": "1.0.4",
+  "name": "@troywjz/arc-dsh",
+  "version": "0.1.0",
   "description": "DeepSeek Harness adapter for Agent Research Copilot (ARC)",
   "type": "module",
   "main": "./plugins/arc/dsh/index.js",
@@ -37,5 +37,8 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/troywjz/arc.git"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
