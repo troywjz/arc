@@ -79,7 +79,7 @@ dsh plugin --profile web add @troywjz/arc-dsh
 For a pinned GitHub release instead:
 
 ```bash
-dsh plugin --profile web add github:troywjz/arc#v0.1.0
+dsh plugin --profile web add github:troywjz/arc#v0.1.1
 ```
 
 For local development, install a checkout directly:
