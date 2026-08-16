@@ -1,18 +1,18 @@
 {
   "name": "@troywjz/arc-dsh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "DeepSeek Harness adapter for Agent Research Copilot (ARC)",
   "type": "module",
   "main": "./plugins/arc/dsh/index.js",
   "bin": {
-    "arc-paper": "./plugins/arc/bin/arc-paper",
-    "arc-llm": "./plugins/arc/bin/arc-llm",
-    "arc-jobs": "./plugins/arc/bin/arc-jobs",
-    "arc-domain": "./plugins/arc/bin/arc-domain",
-    "arc-render": "./plugins/arc/bin/arc-render",
-    "arc-translate": "./plugins/arc/bin/arc-translate",
-    "arc-companion": "./plugins/arc/bin/arc-companion",
-    "arc-runtime": "./plugins/arc/bin/arc-runtime"
+    "arc-paper": "plugins/arc/bin/arc-paper",
+    "arc-llm": "plugins/arc/bin/arc-llm",
+    "arc-jobs": "plugins/arc/bin/arc-jobs",
+    "arc-domain": "plugins/arc/bin/arc-domain",
+    "arc-render": "plugins/arc/bin/arc-render",
+    "arc-translate": "plugins/arc/bin/arc-translate",
+    "arc-companion": "plugins/arc/bin/arc-companion",
+    "arc-runtime": "plugins/arc/bin/arc-runtime"
   },
   "files": [
     "LICENSE",

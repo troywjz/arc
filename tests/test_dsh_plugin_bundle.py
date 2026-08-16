@@ -20,8 +20,8 @@ def test_dsh_bundle_manifest_points_to_adapter_patch() -> None:
     assert manifest["dsh"]["bundle"]["patch"] == (
         "./plugins/arc/dsh/cordis.patch.yml"
     )
-    assert manifest["bin"]["arc-paper"] == "./plugins/arc/bin/arc-paper"
-    assert manifest["bin"]["arc-runtime"] == "./plugins/arc/bin/arc-runtime"
+    assert manifest["bin"]["arc-paper"] == "plugins/arc/bin/arc-paper"
+    assert manifest["bin"]["arc-runtime"] == "plugins/arc/bin/arc-runtime"
     assert "dsh-plugin" in manifest["keywords"]
 
 
