@@ -26,6 +26,13 @@ packages/arc-paper/.venv/bin/arc-llm --help
 Use the selected launcher in place of `arc-llm` below. Do not search package
 internals for another executable.
 
+When ARC is running inside DeepSeek Harness, the DSH adapter exports
+`$DSH_ARC_RUNTIME`; prefer `"$DSH_ARC_RUNTIME" arc-llm ...` if a bare
+`arc-llm` command is not found. The `dsh` provider uses the local authenticated
+bridge started by the DSH plugin and delegates the actual model call to DSH's
+native `ctx.llm` service. Set `ARC_DSH_PROVIDER` when the desired DSH route is
+not `deepseek-official`.
+
 ## Check the Provider
 
 ```bash
@@ -35,7 +42,8 @@ arc-llm doctor --provider auto
 The diagnostic reports safe availability and selection facts without printing
 credentials. Inspect `data.provider`, `data.available`, `data.executable`, and
 `data.details`. `auto` chooses a supported host-native provider when one is
-available.
+available. In a DSH model shell, the bridge is detected through
+`DSH_SESSION_ID` or `DSH_ARC_LLM_SOCKET` and resolves to the `dsh` provider.
 
 ## Prepare a Structured Request
 

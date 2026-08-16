@@ -132,6 +132,12 @@ def test_config_resolution_matrix_is_explicit_and_host_deterministic() -> None:
             "high": "default",
             "xhigh": "default",
         },
+        "dsh": {
+            "low": "deepseek-v4-flash",
+            "medium": "deepseek-v4-flash",
+            "high": "deepseek-v4-flash",
+            "xhigh": "deepseek-v4-flash",
+        },
     }
     with pytest.raises(InvalidRequestError, match="low, medium, high, or xhigh"):
         ModelSelection(tier="max")  # type: ignore[arg-type]
