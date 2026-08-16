@@ -4,7 +4,7 @@ umask 077
 
 launcher_version="7"
 install_ref_override="${ARC_INSTALL_REF:-}"
-install_repo="${ARC_INSTALL_REPO:-https://github.com/tririver/arc.git}"
+install_repo="${ARC_INSTALL_REPO:-https://github.com/troywjz/arc.git}"
 install_source="${ARC_INSTALL_SOURCE:-auto}"
 python_spec="${ARC_INSTALL_PYTHON:->=3.11}"
 uv_bin_override="${ARC_INSTALL_UV:-}"

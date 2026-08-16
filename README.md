@@ -68,6 +68,37 @@ codex plugin add arc@arc
 Give your coding agent this repository and ask it to inspect the repository and
 install ARC for its environment.
 
+### DeepSeek Harness
+
+Install the DSH-compatible ARC bundle from npm:
+
+```bash
+dsh plugin --profile web add @troywjz/arc-dsh
+```
+
+For a pinned GitHub release instead:
+
+```bash
+dsh plugin --profile web add github:troywjz/arc#v0.1.0
+```
+
+For local development, install a checkout directly:
+
+```bash
+dsh plugin --profile web add /path/to/arc
+```
+
+After installation, verify the composed profile with:
+
+```bash
+dsh plugin --profile web list
+dsh --profile web --dump-config
+```
+
+The DSH adapter registers the ARC Skill, ARC command wrappers, and a local
+bridge to DSH's native model runtime. GitHub source installation and the npm
+package both pin the ARC runtime to the matching release tag.
+
 ## Start with ARC
 
 After installing ARC, ask for the research outcome directly:

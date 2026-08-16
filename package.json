@@ -1,0 +1,44 @@
+{
+  "name": "@troywjz/arc-dsh",
+  "version": "0.1.0",
+  "description": "DeepSeek Harness adapter for Agent Research Copilot (ARC)",
+  "type": "module",
+  "main": "./plugins/arc/dsh/index.js",
+  "bin": {
+    "arc-paper": "./plugins/arc/bin/arc-paper",
+    "arc-llm": "./plugins/arc/bin/arc-llm",
+    "arc-jobs": "./plugins/arc/bin/arc-jobs",
+    "arc-domain": "./plugins/arc/bin/arc-domain",
+    "arc-render": "./plugins/arc/bin/arc-render",
+    "arc-translate": "./plugins/arc/bin/arc-translate",
+    "arc-companion": "./plugins/arc/bin/arc-companion",
+    "arc-runtime": "./plugins/arc/bin/arc-runtime"
+  },
+  "files": [
+    "LICENSE",
+    "plugins/arc/.claude-plugin",
+    "plugins/arc/.codex-plugin",
+    "plugins/arc/bin",
+    "plugins/arc/dsh",
+    "plugins/arc/skills"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./plugins/arc/dsh/cordis.patch.yml"
+    }
+  },
+  "keywords": [
+    "dsh-plugin",
+    "arc",
+    "research",
+    "theoretical-physics"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/troywjz/arc.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
